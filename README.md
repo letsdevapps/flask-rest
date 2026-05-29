@@ -62,3 +62,9 @@ Forma moderna (recomendada)
 Ou
 
     flask --app app run
+
+## Docker
+
+    docker build -t flask-rest .
+
+    docker run --rm -it -p 5000:5000 --name flask-rest flask-rest

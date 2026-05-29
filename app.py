@@ -1,10 +1,12 @@
 from flask import Flask
-from templates.users import bp as users_bp
-from templates.products import bp as products_bp
+from api.users_api import bp as users_api
+from api.products_api import bp as products_api
+from web.product_web import product_web
 
 app = Flask(__name__)
-app.register_blueprint(users_bp)
-app.register_blueprint(products_bp)
+app.register_blueprint(users_api)
+app.register_blueprint(products_api)
+app.register_blueprint(product_web)
 
 
 @app.route('/')
@@ -13,4 +15,5 @@ def root():
 
 
 if __name__ == '__main__':
-    app.run()
+    #app.run()
+    app.run(host="0.0.0.0", port=5000, debug=True)
