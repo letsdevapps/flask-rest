@@ -1,9 +1,8 @@
 from flask import Blueprint, jsonify
 
-bp = Blueprint("users", __name__, url_prefix="/users")
+bp = Blueprint("users_api", __name__, url_prefix="/api/users")
 
-
-@bp.route("/")
+@bp.route("/", methods=["GET"])
 def users():
     message = '----- Flask Rest | Users -----'
     #return jsonify([])

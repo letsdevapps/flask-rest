@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+
+    <h1>Lista de Produtos</h1>
+
+    <ul>
+        <li>Produto 1</li>
+        <li>Produto 2</li>
+        <li>Produto 3</li>
+    </ul>
+
+    <h1>Lista de Produtos</h1>
+
+    {% if products %}
+        <p>Tem produtos!</p>
+    {% endif %}
+
+    <ul>
+        {% for product in products %}
+            <li>{{ product }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
